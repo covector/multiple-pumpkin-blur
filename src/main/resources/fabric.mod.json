@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "multiple-pumpkin-blur",
+	"version": "1.0",
+	"name": "Multiple Pumpkin Blur",
+	"description": "Multiple pumpkin overlays controlled by NBT tag",
+	"authors": [
+		"covector"
+	],
+	"contact": {
+		"sources": "https://github.com/covector/multiple-pumpkin-blur"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/multiple-pumpkin-blur/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.covector.multiplepumpkinblur.MultiplePumpkinBlur"
+		],
+		"client": [
+			"dev.covector.multiplepumpkinblur.MultiplePumpkinBlurClient"
+		]
+	},
+	"mixins": [
+		"multiple-pumpkin-blur.mixins.json",
+		{
+			"config": "multiple-pumpkin-blur.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
